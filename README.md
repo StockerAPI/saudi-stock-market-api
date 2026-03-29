@@ -46,7 +46,7 @@ This repository is designed to make Saudi Arabia market API coverage easier to d
 
 ## Links
 
-- Website: https://kun.pro/markets/saudi-stock-market-api
+- Website: https://kun.pro/stocks-en.html
 - Docs: https://kun.pro/docs-en.html
 - Main site: https://kun.pro
 
