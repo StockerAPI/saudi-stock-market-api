@@ -2,47 +2,76 @@
 
 Real-time Saudi stock market API with WebSocket, OHLCV, and snapshot endpoints for Tadawul.
 
-## Overview
+## Build With Saudi Arabia Market Data
 
-Kun Data provides real-time market data for Saudi Arabia through a token-authenticated API stack designed for charting tools, watchlists, market overview pages, brokerage dashboards, and quant workflows.
+Kun Data provides a token-authenticated API stack for developers who need Saudi Arabia market data in products that must load fast, stream live prices, and support charting or screening workflows.
 
-This repository focuses on Saudi Arabia market coverage with support for TADAWUL.
+This repository is focused on Saudi Arabia coverage with support for TADAWUL and is designed for teams building broker dashboards, watchlists, quant tools, stock screeners, mobile apps, and market overview pages.
 
-## API Capabilities
+## Why Developers Search For This
 
-- Real-time WebSocket market data for Saudi Arabia
-- Historical OHLCV and candlestick data
-- Exchange snapshot endpoint for lists, rankings, and overview pages
-- Token-based authentication
-- Query and subscribe by `market`, `exchange` or `venue`, `symbol`, and `symbols`
+Developers usually need one or more of these:
 
-## Integration Model
+- Real-time Saudi Arabia stock market API
+- WebSocket streaming quotes
+- Historical OHLCV or candlestick data
+- Snapshot data for market movers, rankings, and watchlists
+- Coverage for TADAWUL
 
-- WebSocket realtime streaming for live prices and incremental updates
-- Historical K-line endpoint with `interval` and `count`
-- Exchange snapshot endpoint for batched market views
-- Token-based access for HTTP and WebSocket requests
+This repository makes that intent explicit for GitHub and search discovery while pointing to the live docs and product pages.
 
-## Supported Exchanges
+## What You Get
+
+| Capability | What it is used for |
+| --- | --- |
+| Real-time WebSocket API | Live prices, incremental updates, ticker streams, dashboard refreshes |
+| Historical OHLCV API | Charts, backfill, analytics, historical candles, K-line data |
+| Exchange snapshot API | Watchlists, overview pages, leaderboard modules, quote batches |
+| Token-based auth | Access control for HTTP and WebSocket integrations |
+| Market and exchange filters | Query by `market`, `exchange` or `venue`, `symbol`, and `symbols` |
+
+## Product Fit
+
+This API model is suitable for:
+
+- Trading dashboards
+- Market overview products
+- Watchlists and screeners
+- Broker or internal finance tools
+- Mobile investing apps
+- Quant research and monitoring systems
+
+## Coverage
+
+Supported exchanges for this repository:
 
 - `TADAWUL`
 
 
-## Common Use Cases
+Primary market code:
 
-- Stock charting applications
-- Trading terminals
-- Watchlists and screeners
-- Market movers and overview pages
-- Internal financial dashboards
+- `SA`
 
-## Why This Repo Exists
+## Integration Pattern
 
-Developers often search for terms like:
+The current API stack follows a straightforward model:
+
+- Use a token for authenticated access
+- Use HTTP for initialization and historical backfill
+- Use the snapshot endpoint for batched market views
+- Use WebSocket for live market updates after the first page load
+
+## Technical Notes
+
+- Historical requests use a single `symbol` in `EXCHANGE:TICKER` format
+- Historical candles support `interval` and `count`
+- Snapshot requests support `market`, `venue`, `symbol`, `symbols`, `ticker`, and `tickers`
+- WebSocket subscriptions support market-wide, exchange-level, and symbol-level subscriptions
+- HTTP requests can use bearer authentication and WebSocket connections use token query auth
+
+## SEO Keywords
 
 `Saudi stock market API | Tadawul API | Saudi Arabia stock data API | Saudi OHLCV API`
-
-This repository is designed to make Saudi Arabia market API coverage easier to discover and evaluate.
 
 ## Links
 
@@ -50,13 +79,27 @@ This repository is designed to make Saudi Arabia market API coverage easier to d
 - Docs: https://kun.pro/docs-en.html
 - Main site: https://kun.pro
 
-## Authentication
+## FAQ
 
-Your account token is used to access the API. HTTP requests can use bearer authentication, and WebSocket connections pass the token in the query string.
+### Does this support real-time Saudi Arabia market data?
 
-## Notes
+Yes. The API stack includes WebSocket streaming for live price updates and realtime market refresh workflows.
 
-- `market` is the access and authorization key for each product
-- Historical data uses a single `symbol` in `EXCHANGE:TICKER` format
-- Snapshot queries support filtering by market, venue, symbol, and ticker
-- WebSocket subscriptions support market-wide or symbol-specific streaming
+### Does this include historical candles or OHLCV data?
+
+Yes. Historical market data supports candle-based retrieval for charting, analytics, and backfill use cases.
+
+### Can I query by exchange or symbol?
+
+Yes. The available endpoints support filtering by market and exchange, and symbol-level queries are supported where documented.
+
+### What kind of products is this repository targeting?
+
+It is aimed at developers building charting products, watchlists, screeners, financial dashboards, market overview pages, and other applications that need structured market data.
+
+## Evaluate The API
+
+If you need Saudi Arabia market data coverage for TADAWUL, start with the product page and documentation:
+
+- Product access: https://kun.pro/stocks-en.html
+- Developer docs: https://kun.pro/docs-en.html
