@@ -18,8 +18,6 @@ Most teams integrating market data need one or more of these capabilities:
 - Snapshot data for market movers, rankings, and watchlists
 - Coverage for TADAWUL
 
-This repository makes that intent explicit for GitHub and search discovery while pointing to the live docs and product pages.
-
 ## What You Get
 
 | Capability | What it is used for |
